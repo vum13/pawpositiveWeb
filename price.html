@@ -1,102 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Pawsitive Pet Academy - Pricing</title>
+  <meta charset="UTF-8">
+  <title>Pawsitive Pet Academy</title>
 </head>
 <body>
-    <header>
+
+<header>
+  <div>
+    <img src="" alt="Pawsitive Pet Academy Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#shop">Shop</a></li>
+    </ul>
+    <ul>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#cart">Cart</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#contact">Contact Details</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <div>
+      <h3>Your Details</h3>
+      <form>
         <div>
-            <img src="Paws-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="150" height="150">
+          <label for="fullname">Full Name</label><br>
+          <input type="text" id="fullname" name="fullname">
         </div>
-        <nav>
-            <ul>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <br>
+        <div>
+          <label for="phone">Phone Number</label><br>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <br>
+        <div>
+          <label for="email">Email Address</label><br>
+          <input type="email" id="email" name="email">
+        </div>
+      </form>
 
-    <main>
-        <section>
-            <h2>Your Details</h2>
-            <form>
-                <div>
-                    <label for="fullName">Full Name</label><br>
-                    <input type="text" id="fullName" name="fullName">
-                </div>
-                <div>
-                    <label for="phoneNumber">Phone Number</label><br>
-                    <input type="tel" id="phoneNumber" name="phoneNumber">
-                </div>
-                <div>
-                    <label for="emailAddress">Email Address</label><br>
-                    <input type="email" id="emailAddress" name="emailAddress">
-                </div>
-            </form>
+      <br><br>
 
-            <h2>Your Quote</h2>
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>items</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                       
-                    </tbody>
-                </table>
-            </div>
-        </section>
+      <h3>Your Quote</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Items</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        <section>
-            <h2>Select course</h2>
+    <div>
+      <h3>Select courses</h3>
+      
+      <h4>6 weeks</h4>
+      <div>
+        <label><input type="checkbox" name="course" value="Basic Dog walk"> Basic Dog walk</label><br>
+        <label><input type="checkbox" name="course" value="Puppy care"> Puppy care</label><br>
+        <label><input type="checkbox" name="course" value="Pet first Aid"> Pet first Aid</label>
+      </div>
 
-            <h3>6 weeks</h3>
-            <form>
-                <div>
-                    <input type="checkbox" id="basicDogWalk" name="course" value="750">
-                    <label for="basicDogWalk">Basic Dog walk</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="puppyCare" name="course" value="750">
-                    <label for="puppyCare">Puppy care</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="petFirstAid" name="course" value="750">
-                    <label for="petFirstAid">Pet first Aid</label>
-                </div>
-            </form>
+      <h4>6 months</h4>
+      <div>
+        <label><input type="checkbox" name="course" value="Pet business management"> Pet business management</label><br>
+        <label><input type="checkbox" name="course" value="Animal behaviour"> Animal behaviour</label><br>
+        <label><input type="checkbox" name="course" value="Pet grooming"> Pet grooming</label><br>
+        <label><input type="checkbox" name="course" value="canine obedience training"> canine obedience training</label>
+      </div>
 
-            <h3>6 months</h3>
-            <form>
-                <div>
-                    <input type="checkbox" id="petBusinessManagement" name="course" value="1500">
-                    <label for="petBusinessManagement">Pet business management</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="animalBehaviour" name="course" value="1500">
-                    <label for="animalBehaviour">Animal behaviour</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="petGromming" name="course" value="1500">
-                    <label for="petGromming">Pet gromming</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="canineObedienceTraining" name="course" value="1500">
-                    <label for="canineObedienceTraining">Canine obedience training</label>
-                </div>
-            </form>
+      <br>
+      <div>
+        <p>Subtotal:</p>
+        <p>Discount:</p>
+      </div>
+    </div>
+  </section>
+</main>
 
-            <div>
-                <h3>Subtotal:</h3>
-                <h3>Discount:</h3>
-            </div>
-        </section>
-    </main>
+<footer>
+  <div>
+    <p>Pawsitive Pet Academy</p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#shop">Shop</a></li>
+    </ul>
+    <ul>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#cart">Cart</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#contact">Contact Details</a></li>
+    </ul>
+  </nav>
+</footer>
+
 </body>
 </html>
