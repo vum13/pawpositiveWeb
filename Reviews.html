@@ -1,156 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews - Pawsitive Pet Academy</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  
+  body {
+
+    background-image: url('backgroung pic.jpeg');
+    background-repeat: repeat;
+
+    color:#222;
+  }
+  
+  /* Header */
+  header { display:flex; justify-content:space-between; align-items:flex-start; padding:20px 40px; }
+  .logo img { width:90px; }
+  .logo-text { color:#a8d8ff; font-style:italic; font-weight:bold; font-size:14px; transform:rotate(-8deg); }
+  
+  nav { padding-top:15px; }
+  nav a { text-decoration:none; color:#000; font-weight:bold; font-size:13px; margin:0 8px; display:inline-block; }
+  nav a:hover { color:#5b3a29; text-decoration:underline; }
+  
+  /* Content */
+ 
+  .container h1 { font-size:16px; margin-bottom:30px; }
+  
+  .review { 
+    padding:15px 20px; border-radius:8px; margin:15px 0; 
+    font-size:12px; line-height:1.5; text-align:left;
+    max-width:600px; position:relative;
+  }
+  .review-yellow { background:#ffe680; margin-left:0; }
+  .review-pink { background:#f8c8c8; margin-left:auto; }
+  
+  .review img { width:35px; height:35px; border-radius:50%; object-fit:cover; vertical-align:middle; margin-right:8px; }
+  .review b { font-size:11px; }
+  
+  /* Footer */
+  footer { background:#5b3a29; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; margin-top:40px; }
+  footer a { color:white; text-decoration:none; font-size:12px; margin:0 8px; }
+  .footer-logo { color:#a8d8ff; font-style:italic; font-weight:bold; font-size:18px; }
+
+  @media(max-width:700px){
+    header{ flex-direction:column; }
+    footer{ flex-direction:column; text-align:center; }
+    .review-pink{ margin-left:0; }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <img src="Logo.jpeg" alt="Pet Pawsitive Academy Logo" width="70">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="courses.html">Courses</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="blog.html">Blog</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html">Shop</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="cart.html">Cart</a>
-      <a href="team.html">Our Team</a>
-      <a href="contact.html">Contact Details</a>
-        
-   
-    </header>
-   <table width="400" border="0" cellpadding="10" cellspacing="10" align="center">
-    
-  
-    <tr>
-        <td colspan="2">
-            <h3 align="center">What our customers are saying</h3>
-        </td>
-    </tr>
 
-  
-    <tr>
-        <td>
-            <table width="300" bgcolor="#D9D9D9" border="0" cellpadding="10">
-                <tr><td>"Pawsitive changed everything! My dog finally listens and the chew toys last so long!"</td></tr>
-                <tr>
-                    <td>
-                        <table border="0">
-                            <tr>
-                                <td>⚪</td>
-                                <td><small>Olivia, Durban</small></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td width="80"></td>
-    </tr>
+<header>
+  <div class="logo">
 
-  
-    <tr>
-        <td width="80"></td>
-        <td>
-            <table width="300" bgcolor="#D9D9D9" border="0" cellpadding="10">
-                <tr><td>"Amazing courses! From basic to career training, plus my puppy loves the toys."</td></tr>
-                <tr>
-                    <td align="right">
-                        <table border="0">
-                            <tr>
-                                <td>⚪</td>
-                                <td><small>Thando, Durban</small></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-
-  
-    <tr>
-        <td>
-            <table width="300" bgcolor="#D9D9D9" border="0" cellpadding="10">
-                <tr><td>"My dog learned so fast! Positive training and cute toy packaging too!"</td></tr>
-                <tr>
-                    <td>
-                        <table border="0">
-                            <tr>
-                                <td>⚪</td>
-                                <td><small>Themba, Cape Town</small></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td width="80"></td>
-    </tr>
-
-   
-    <tr>
-        <td width="80"></td>
-        <td>
-            <table width="300" bgcolor="#D9D9D9" border="0" cellpadding="10">
-                <tr><td>"Did the 6-month program and started my own pet business. Toys are safe and quality!"</td></tr>
-                <tr>
-                    <td align="right">
-                        <table border="0">
-                            <tr>
-                                <td>⚪</td>
-                                <td><small>Priya, Durban</small></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-
-    
-    <tr>
-        <td>
-            <table width="300" bgcolor="#D9D9D9" border="0" cellpadding="10">
-                <tr><td>"Love the toys as training rewards. Great for energy and bedtime!"</td></tr>
-                <tr>
-                    <td>
-                        <table border="0">
-                            <tr>
-                                <td>⚪</td>
-                                <td><small>Emily, Pretoria</small></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td width="80"></td>
-    </tr>
-
-   
-
-</table>
-      <footer>
-           <img src="images\second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="150" height="100">
+    <img src="Logo.jpeg" alt="Pawsitive Logo" onerror="this.src='https://via.placeholder.com/90x90?text=PAW'">
+  </div>
+  <nav>
     <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="courses.html">Courses</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="blog.html">Blog</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html">Shop</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="cart.html">Cart</a>
-      <a href="team.html">Our Team</a>
-      <a href="contact.html">Contact Details</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="blog.html">Blog</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="shop.html">Shop</a><br>
+    <a href="reviews.html">Reviews</a>
+    <a href="cart.html">Cart</a>
+    <a href="team.html">Our Team</a>
+    <a href="contact.html">Contact Details</a>
+  </nav>
+</header>
 
-         
-   
-    </footer>
+<div class="container">
+  <h1>What our customers are saying</h1>
+  
+  <div class="review review-yellow">
+    "Pawsitive changed everything! My dog finally listens and the chew toys last so long!"<br>
+    <img src="images\Olivia.jpeg" onerror="this.src='https://via.placeholder.com/35x35?text=O'"> <b>Olivia, Durban</b>
+  </div>
+  
+  <div class="review review-pink">
+    "Amazing courses! From basic to career training, plus my puppy loves the toys."<br>
+    <img src="images\Thando.jpeg" onerror="this.src='https://via.placeholder.com/35x35?text=T'"> <b>Thando, Durban</b>
+  </div>
+  
+  <div class="review review-yellow">
+    "My dog learned so fast! Positive training and cute toy packaging too!"<br>
+    <img src="images\Themba.jpeg" onerror="this.src='https://via.placeholder.com/35x35?text=T'"> <b>Themba, Cape Town</b>
+  </div>
+  
+  <div class="review review-pink">
+    "Did the 6-month program and started my own pet business. Toys are safe and quality!"<br>
+    <img src="images\Priya.jpeg" onerror="this.src='https://via.placeholder.com/35x35?text=P'"> <b>Priya, Durban</b>
+  </div>
+  
+  <div class="review review-yellow">
+    "Love the toys as training rewards. Great for energy and bedtime!"<br>
+    <img src="images\Emily.jpeg" onerror="this.src='https://via.placeholder.com/35x35?text=E'"> <b>Emily, Pretoria</b>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Pawsitive Pet Academy</div>
+  <div>
+    <a href="#">Home</a> <a href="#">About Us</a> <a href="#">Courses</a> <a href="#">Pricing</a> <a href="#">Blog</a> <a href="#">Gallery</a> <a href="#">Shop</a><br>
+    <a href="#">Reviews</a> <a href="#">Cart</a> <a href="#">Our Team</a> <a href="#">Contact Details</a>
+  </div>
+</footer>
 
 </body>
 </html>
