@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
 
-    <header>
-        <img src="Logo.jpeg" alt="Pet Pawsitive Academy Logo" width="70">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="courses.html">Courses</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="blog.html">Blog</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html">Shop</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="cart.html">Cart</a>
-      <a href="team.html">Our Team</a>
-      <a href="contact.html">Contact Details</a>
+     <header>
+        <a href="index.html" class="logo">
+            <img src="images\logo.jpeg" alt="Pawsitive Pet Academy Logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="shop.html">Shop</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="cart.html">Cart</a>
+            <a href="team.html">Our Team</a>
+            <a href="contact.html">Contact Details</a>
+        </nav>
+
     </header>
     <!-- Main Content Container -->
-    <table width="600" align="center" border="0" cellpadding="10" cellspacing="0">
-        
-        <!-- Top Section: Image and Course Title/Details -->
-        <tr>
-            <td width="50%" valign="top">
-                <img src="images\scaredCat.webp" alt="Puppy care" width="100%">
-            </td>
-            <td width="50%" valign="top">
+   <main>
+        <!-- Top section: image and course details -->
+        <section class="course-top">
+            <img src="images\scaredCat.webp" alt="Scared Cat" class="course-image">
+ 
+            <div class="course-info">
                 <h2>Animal Behaviour</h2>
                 <ul>
                     <li>Understanding animal body language</li>
@@ -42,26 +46,31 @@
                     <li>Recognizing and responding to social cues</li>
                     <li>When to seek professional help for behavioural concerns</li>
                 </ul>
-            </td>
-        </tr>
+                <p class="duration">Duration: 2h</p>
+                <p class="fee">Fee: R 1500</p>
+            </div>
+        </section>
+ 
+        <section class="course-learn">
+            <h3>What will be learned:</h3>
+            <p>We will be learning how to understand and manage animal behaviour.</p>
+        </section>
+    </main>
 
-        <!-- Middle Section: Duration & Fee -->
-        <tr>
-            <td colspan="2">
-                <p><b>Duration: 2h</b></p>
-                <p><b>Fee: R1500</b></p>
-            </td>
-        </tr>
-
-        <!-- Bottom Section: What will be learned -->
-        <tr>
-            <td colspan="2">
-                <h3>What will be learned:</h3>
-                <p>To learn safely understand your pet.</p>
-            </td>
-        </tr>
-
-    </table>
+    <footer>
+           <img src="images\second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="150" height="100">
+    <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses.html">Courses</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html">Shop</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="cart.html">Cart</a>
+      <a href="team.html">Our Team</a>
+      <a href="contact.html">Contact Details</a>
+    </footer>
     
 </body>
 </html>
