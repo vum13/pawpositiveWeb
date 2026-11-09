@@ -4,6 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    ><style>* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  
+  body { 
+   
+    background-image: url('backgroung pic.jpeg');
+  
+   
+  }
+  
+
+  
+  /* Header */
+  header { padding:20px 40px; display:flex; align-items:flex-start; gap:40px; position:relative; z-index:2; }
+  .logo { text-align:center; }
+  .logo img { width:90px; }
+  .logo-text { color:#a8d8ff; font-style:italic; font-weight:bold; font-size:14px; transform:rotate(-8deg); }
+  
+  nav { padding-top:15px; }
+  nav a { text-decoration:none; color:#000; font-weight:bold; font-size:14px; margin:0 10px; display:inline-block; }
+  nav a:hover { color:#5b3a29; text-decoration:underline; }
+  
+  /* Content */
+  .container { max-width:1000px; margin:20px auto; padding:40px 20px; display:grid; grid-template-columns:1fr 1fr; gap:40px; position:relative; z-index:2; background:rgba(253,246,238,0.85); border-radius:20px; }
+  .history h2 { font-size:16px; margin-bottom:15px; }
+  .history p { font-size:12px; line-height:1.6; color:#333; }
+  
+  .pet-image { text-align:center; }
+  .pet-image img { width:100%; max-width:400px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+  
+  
+  footer { background:#5b3a29; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; margin-top:50px; position:relative; z-index:2; }
+  footer a { color:white; text-decoration:none; font-size:12px; margin:0 8px; }
+  .footer-logo { color:#a8d8ff; font-style:italic; font-weight:bold; font-size:18px; }
+
+  @media(max-width:700px){
+    .container{ grid-template-columns:1fr; }
+    header{ flex-direction:column; }
+  }</style>
 </head>
 <body>
      <header>
