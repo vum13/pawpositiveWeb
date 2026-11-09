@@ -2,14 +2,282 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Price</title>
+  <title>Pricing - Pawsitive Pet Academy</title>
+  <style>
+    :root {
+        --gold: #ebd469;
+      --pink: #f5c8c2;
+      --rose: #f8eae1;
+    --cream: #fff6e9;
+      --blue: #8de4ff;
+      --purple: #a379c9;
+      --footer-bg: #503B29;
+      --text-dark: #000000;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('backgroung pic.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-color: var(--cream-light);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header Styling */
+    header {
+      
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      border-radius: 8px;
+      height: 150px;
+      width: 150px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    
+    header a:hover {
+      background-color: var(--gold);
+      color: #000;
+    }
+
+    /* Main Layout */
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    main > section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #222;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: 1rem;
+      color: #444;
+      margin: 1.2rem 0 0.5rem 0;
+      font-weight: 600;
+    }
+
+    /* Form & Input Styling */
+    form div {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      width: 100%;
+      padding: 0.6rem;
+      background-color: var(--blue);
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 0.95rem;
+      color: #111;
+      margin-top: 0.3rem;
+    }
+
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-color: var(--purple);
+    }
+
+    /* Quote Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--blue);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.9rem;
+      color: #222;
+    }
+
+    th {
+      font-weight: 700;
+      border-bottom: 2px solid rgba(0,0,0,0.05);
+    }
+
+    /* Course Selection Styling */
+    .course-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .course-group label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+  
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-weight: normal;
+      cursor: pointer;
+      width: fit-content;
+      font-size: 0.9rem;
+    }
+
+    input[type="checkbox"] {
+      accent-color: var(--pink);
+      cursor: pointer;
+    }
+
+    .totals-box {
+      margin-top: 2rem;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--pink);
+    }
+
+    .totals-box p {
+      margin: 0.4rem 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Error message styling */
+    .error-message {
+      color: #d9534f;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-top: 0.3rem;
+      display: block;
+    }
+
+    /* Submit Button Styling */
+    .submit-btn {
+      background-color: var(--purple);
+      color: var(--text-dark);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background 0.2s;
+    }
+
+    .submit-btn:hover {
+      background-color: var(--purple);
+      color: white;
+    }
+
+    /* Footer Styling */
+   footer {
+      background-color: var(--footer-bg);
+      color: white;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: auto;
+    }
+
+    footer img {
+      height: 200px;
+      width: 200px;
+    }
+
+    footer a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+           background-color: var(--gold);
+          color: #000;
+    }
+
+    @media (max-width: 768px) {
+      main > section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        justify-content: center;
+        margin-top: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <div>
-    <img src="Logo.jpeg" alt="Pawsitive Pet Academy Logo" width="150" height="100">
-     <a href="index.html">Home</a>
+  
+    <img src="Paws-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="130" height="90">
+    <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="courses.html">Courses</a>
       <a href="pricing.html">Pricing</a>
@@ -20,31 +288,33 @@
       <a href="cart.html">Cart</a>
       <a href="team.html">Our Team</a>
       <a href="contact.html">Contact Details</a>
-   
+    </nav>
 </header>
 
 <main>
   <section>
+    <!-- Left Column: User Details & Quote Table -->
     <div>
       <h3>Your Details</h3>
-      <form>
+      <form id="detailsForm" onsubmit="return validateForm(event)">
         <div>
           <label for="fullname">Full Name</label><br>
           <input type="text" id="fullname" name="fullname">
+          <span id="nameError" class="error-message"></span>
         </div>
-        <br>
         <div>
           <label for="phone">Phone Number</label><br>
           <input type="tel" id="phone" name="phone">
+          <span id="phoneError" class="error-message"></span>
         </div>
-        <br>
         <div>
           <label for="email">Email Address</label><br>
           <input type="email" id="email" name="email">
+          <span id="emailError" class="error-message"></span>
         </div>
-      </form>
+      
 
-      <br><br>
+      <br>
 
       <h3>Your Quote</h3>
       <table>
@@ -54,46 +324,52 @@
             <th>Amount</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="quoteTableBody">
           <tr>
-            <td></td>
-            <td></td>
+            <td colspan="2" style="text-align: center; color: #333;">No courses selected yet</td>
           </tr>
         </tbody>
       </table>
     </div>
 
+    <!-- Right Column: Course Selection & Totals -->
     <div>
       <h3>Select courses</h3>
       
-      <h4>6 weeks</h4>
-      <div>
-        <label><input type="checkbox" name="course" value="Basic Dog walk"> Basic Dog walk</label><br>
-        <label><input type="checkbox" name="course" value="Puppy care"> Puppy care</label><br>
-        <label><input type="checkbox" name="course" value="Pet first Aid"> Pet first Aid</label>
+      <h4>6 weeks </h4>
+      <div class="course-group">
+        <label><input type="checkbox" name="course" value="Basic Dog Walking" data-price="750"> Basic Dog Walking </label>
+        <label><input type="checkbox" name="course" value="Puppy Care" data-price="750"> Puppy Care </label>
+        <label><input type="checkbox" name="course" value="Pet First Aid" data-price="750"> Pet First Aid</label>
       </div>
 
       <h4>6 months</h4>
-      <div>
-        <label><input type="checkbox" name="course" value="Pet business management"> Pet business management</label><br>
-        <label><input type="checkbox" name="course" value="Animal behaviour"> Animal behaviour</label><br>
-        <label><input type="checkbox" name="course" value="Pet grooming"> Pet grooming</label><br>
-        <label><input type="checkbox" name="course" value="canine obedience training"> canine obedience training</label>
+      <div class="course-group">
+        <label><input type="checkbox" name="course" value="Pet Business Management" data-price="1500"> Pet Business Management</label>
+        <label><input type="checkbox" name="course" value="Animal Behaviour" data-price="1500"> Animal Behaviour</label>
+        <label><input type="checkbox" name="course" value="Pet Grooming" data-price="1500"> Pet Grooming</label>
+        <label><input type="checkbox" name="course" value="Canine Obedience Training" data-price="1500"> Canine Obedience Training</label>
+      </div>
+      <span id="courseError" class="error-message"></span>
+
+      <div class="totals-box">
+        <p>Subtotal: R<span id="subtotal">0.00</span></p>
+        <p>Discount (<span id="discountLabel">0%</span>): R<span id="discount">0.00</span></p>
+        <p style="margin-top: 0.6rem; border-top: 1px solid #ccc; padding-top: 0.4rem;">Total: R<span id="grandTotal">0.00</span></p>
       </div>
 
-      <br>
-      <div>
-        <p>Subtotal:</p>
-        <p>Discount:</p>
-      </div>
-    </div>
+      <!-- Submit Button Added Here -->
+      <button type="submit" class="submit-btn">Submit Quote</button>
+    </form>
+  </div>
   </section>
 </main>
 
 <footer>
-  <div>
-      <img src="images\second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="150" height="100">
-    <a href="index.html">Home</a>
+
+    <img src="images\second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="130" height="90">
+    <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="courses.html">Courses</a>
       <a href="pricing.html">Pricing</a>
@@ -104,7 +380,109 @@
       <a href="cart.html">Cart</a>
       <a href="team.html">Our Team</a>
       <a href="contact.html">Contact Details</a>
+    </nav>
+
 </footer>
+
+<script>
+  // JavaScript Interactive Quote & Discount Calculator
+  const checkboxes = document.querySelectorAll('input[name="course"]');
+  const quoteTableBody = document.getElementById('quoteTableBody');
+  const subtotalElem = document.getElementById('subtotal');
+  const discountLabelElem = document.getElementById('discountLabel');
+  const discountElem = document.getElementById('discount');
+  const grandTotalElem = document.getElementById('grandTotal');
+
+  checkboxes.forEach(box => {
+    box.addEventListener('change', updateQuote);
+  });
+
+  function updateQuote() {
+    const selectedCourses = Array.from(checkboxes).filter(i => i.checked);
+    
+    quoteTableBody.innerHTML = '';
+    let subtotal = 0;
+
+    if (selectedCourses.length === 0) {
+      quoteTableBody.innerHTML = `<tr><td colspan="2" style="text-align: center; color: #333;">No courses selected yet</td></tr>`;
+    } else {
+      selectedCourses.forEach(course => {
+        const name = course.value;
+        const price = parseFloat(course.getAttribute('data-price'));
+        subtotal += price;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${name}</td><td>R${price.toFixed(2)}</td>`;
+        quoteTableBody.appendChild(row);
+      });
+    }
+
+    let discountRate = 0;
+    let count = selectedCourses.length;
+
+    if (count === 2) {
+      discountRate = 0.05;
+    } else if (count === 3) {
+      discountRate = 0.10;
+    } else if (count > 3) {
+      discountRate = 0.15;
+    }
+
+    let discount = subtotal * discountRate;
+    let grandTotal = subtotal - discount;
+
+    subtotalElem.textContent = subtotal.toFixed(2);
+    discountLabelElem.textContent = (discountRate * 100) + '%';
+    discountElem.textContent = discount.toFixed(2);
+    grandTotalElem.textContent = grandTotal.toFixed(2);
+  }
+
+  // Form Validation & Error Messages Function
+  function validateForm(event) {
+    event.preventDefault();
+
+    const fullname = document.getElementById('fullname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const selectedCourses = Array.from(checkboxes).filter(i => i.checked);
+
+    // Clear previous error messages
+    document.getElementById('nameError').textContent = '';
+    document.getElementById('phoneError').textContent = '';
+    document.getElementById('emailError').textContent = '';
+    document.getElementById('courseError').textContent = '';
+
+    let isValid = true;
+
+    if (fullname === '') {
+      document.getElementById('nameError').textContent = 'Please enter your full name.';
+      isValid = false;
+    }
+
+    if (phone === '') {
+      document.getElementById('phoneError').textContent = 'Please enter your phone number.';
+      isValid = false;
+    }
+
+    if (email === '') {
+      document.getElementById('emailError').textContent = 'Please enter your email address.';
+      isValid = false;
+    }
+
+    if (selectedCourses.length === 0) {
+      document.getElementById('courseError').textContent = 'Please select at least one course.';
+      isValid = false;
+    }
+
+    if (isValid) {
+      alert('Success! Your quote has been submitted successfully.');
+      document.getElementById('detailsForm').reset();
+      updateQuote();
+    }
+
+    return false;
+  }
+</script>
 
 </body>
 </html>
