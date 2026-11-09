@@ -1,130 +1,136 @@
 <!DOCTYPE html>
-<html>
-   
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team - Pawsitive Pet Academy</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  
+  body {
+    background-color:#fdf6ee;
+    background-image: url('backgroung pic.jpeg');
+    background-repeat: repeat;
+    background-size: 600px;
+    background-position: center top;
+    color:#222;
+  }
+  
+  /* Header */
+  header { display:flex; justify-content:space-between; align-items:flex-start; padding:20px 40px; }
+  .logo img { width:90px; }
+  .logo-text { color:#a8d8ff; font-style:italic; font-weight:bold; font-size:14px; transform:rotate(-8deg); }
+  
+  nav { padding-top:15px; }
+  nav a { text-decoration:none; color:#000; font-weight:bold; font-size:13px; margin:0 8px; display:inline-block; }
+  nav a:hover { color:#5b3a29; text-decoration:underline; }
+  
+  /* Content */
+  
+  
+  /* Team grid - paw print background image */
+  .team-grid { 
+    display:grid; grid-template-columns:1fr 1fr; gap:30px; 
+  }
+  
+  .team-member {
+    background-image: url('paw-print.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    min-height:200px;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:30px;
+  }
+  
+  .team-card {
+    background:#b8a0d8; color:#000; padding:12px 15px; border-radius:5px;
+    font-size:10px; line-height:1.4; max-width:250px;
+  }
+  .team-card img { width:40px; height:40px; border-radius:50%; object-fit:cover; margin-top:8px; }
+  .team-card b { font-size:11px; }
+  
+  /* Footer */
+  footer { background:#5b3a29; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; margin-top:40px; }
+  footer a { color:white; text-decoration:none; font-size:12px; margin:0 8px; }
+  .footer-logo { color:#a8d8ff; font-style:italic; font-weight:bold; font-size:18px; }
+
+  @media(max-width:700px){
+    .team-grid{ grid-template-columns:1fr; }
+    header{ flex-direction:column; }
+    footer{ flex-direction:column; text-align:center; }
+  }
+</style>
+</head>
 <body>
-    <header>
-        <img src="Logo.jpeg" alt="Pet Pawsitive Academy Logo" width="70">
-         <img src="second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="150" height="100">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="courses.html">Courses</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="blog.html">Blog</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html">Shop</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="cart.html">Cart</a>
-      <a href="team.html">Our Team</a>
-      <a href="contact.html">Contact Details</a>
-   
-    </header>
 
-<center>
-    <h1>Our Team</h1>
-<br>
-
-<table>
-<tr>
-<td align="left" width="500">
-<table width="150" height="150" style="background-image:url('Untitled_design__3_-removebg-preview.png'); background-size:contain; background-repeat:no-repeat; background-position:center;"></table>
-<table bgcolor="#D9D9D9" width="160"><tr><td align="center">
-<font face="Arial" size="2" color="black">
-<b>Lead Trainer</b><br>
-Sarah runs puppy classes and obedience training
-</font>
-</td></tr></table>
-<br>
-<img src="images\Sarah.jpeg" width="40" height="40">
-<br><br>
-</td></tr>
-</table>
-</td>
-<td width="200"></td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td width="200"></td>
-<td align="right" width="500">
-<table background="Untitled_design__3_-removebg-preview.png" width="150" height="150" cellpadding="10">
-<tr><td align="center" valign="middle">
-<br><br><br><br>
-<table bgcolor="#D9D9D9" width="160"><tr><td align="center">
-<font face="Arial" size="2" color="black">
-<b>Senior Trainer</b><br>
-Ben handles advanced training and agility
-</font>
-</td></tr></table>
-<br>
-<img src="images\Ben.jpeg" width="40" height="40">
-<br><br>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<td align="left" width="500">
-<table background="Untitled_design__3_-removebg-preview.png" width="230" height="320" cellpadding="10">
-<tr><td align="center" valign="middle">
-<br><br><br><br>
-<table bgcolor="#D9D9D9" width="160"><tr><td align="center">
-<font face="Arial" size="2" color="black">
-<b>Junior Staff</b><br>
-Mike assists with daily walks and pet care
-</font>
-</td></tr></table>
-<br>
-<img src="images\Mike.jpeg" width="40" height="40">
-<br><br>
-</td></tr>
-</table>
-</td>
-<td width="200"></td>
-</tr>
-</table>
-
-
-<table>
-   <tr>
-       <td width="200"></td>
-       <td align="right" width="500">
-         <table background="Untitled_design__3_-removebg-preview.png" width="230" height="320" cellpadding="10">
-         <tr><td align="center" valign="middle">
-               <br><br><br><br>
-       <table bgcolor="#D9D9D9" width="160"><tr><td align="center">
-       <font face="Arial" size="2" color="black">
-      <b>Volunteer</b><br>
-      Jane helps with weekend events and adoption days
-</font>
-</td></tr></table>
-<br>
-<img src="images\Jane (2).jpeg" width="40" height="40">
-<br><br>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-
-</center>
-<footer>
-       <img src="images\second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="150" height="100">
+<header>
+  <div class="logo">
+    <div class="logo-text">Pawsitive Pet Academy</div>
+    <img src="images\logo.jpeg" alt="Pawsitive Logo" onerror="this.src='https://via.placeholder.com/90x90?text=PAW'">
+  </div>
+  <nav>
     <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="courses.html">Courses</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="blog.html">Blog</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html">Shop</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="cart.html">Cart</a>
-      <a href="team.html">Our Team</a>
-      <a href="contact.html">Contact Details</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="blog.html">Blog</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="shop.html">Shop</a><br>
+    <a href="reviews.html">Reviews</a>
+    <a href="cart.html">Cart</a>
+    <a href="team.html">Our Team</a>
+    <a href="contact.html">Contact Details</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="team-grid">
+    <div class="team-member">
+      <div class="team-card">
+        <b>Sarah Thompson</b><br>
+        Head Trainer & Founder<br>
+        10 years experience in dog training and behavior. Certified professional.<br>
+        <img src="images\Sarah.jpeg" onerror="this.src='https://via.placeholder.com/40x40?text=S'">
+      </div>
+    </div>
+    
+    <div class="team-member">
+      <div class="team-card">
+        <b>David Chen</b><br>
+        Pet Care Instructor<br>
+        Specializes in cat behavior and enrichment. Passionate about positive training.<br>
+        <img src="images\Mike.jpeg" onerror="this.src='https://via.placeholder.com/40x40?text=D'">
+      </div>
+    </div>
+    
+    <div class="team-member">
+      <div class="team-card">
+        <b></b><br>
+        Training Assistant<br>
+        Loves working with puppies and first-time owners. Enjoys teaching group classes.<br>
+        <img src="images\Jane (2).jpeg" onerror="this.src='https://via.placeholder.com/40x40?text=L'">
+      </div>
+    </div>
+    
+    <div class="team-member">
+      <div class="team-card">
+        <b>Ben Wilson</b><br>
+        Grooming & Care Lead<br>
+        Expert in grooming and health checks. Makes every pet feel comfortable.<br>
+        <img src="images\Ben.jpeg" onerror="this.src='https://via.placeholder.com/40x40?text=E'">
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Pawsitive Pet Academy</div>
+  <div>
+    <a href="#">Home</a> <a href="#">About Us</a> <a href="#">Courses</a> <a href="#">Pricing</a> <a href="#">Blog</a> <a href="#">Gallery</a> <a href="#">Shop</a><br>
+    <a href="#">Reviews</a> <a href="#">Cart</a> <a href="#">Our Team</a> <a href="#">Contact Details</a>
+  </div>
+</footer>
 
 </body>
 </html>
