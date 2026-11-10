@@ -32,55 +32,46 @@
 
     /* Header Styling */
     header {
-    display:flex; justify-content:space-between; align-items:flex-start;
-    padding:20px 30px; background:rgba(255,248,238,0.9);
-  }
-  .header img { width:80px; height:80px; }
-  nav a { text-decoration:none; color:#000; font-weight:bold; font-size:13px; margin:0 8px; }
-  nav { line-height:24px; text-align:center; }
-  
- footer {
-    background:#5b3a29; color:white;
-    padding:20px 30px; display:flex; justify-content:space-between; align-items:center;
-    margin-top:30px;
-  }
+      padding: 15px 30px;
+      display: flex;
+      align-items: right;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background-color: rgba(254, 248, 243, 0.85);
+      backdrop-filter: blur(5px);
+    }
 
-  footer a { color:white; text-decoration:none; font-size:12px; margin:0 8px; }
-  .footer img { color:#a8d8ff; font-style:italic; font-weight:bold; font-size:20px; transform:rotate(-8deg); }
+    header img {
+      border-radius: 8px;
+      height: 120px;
+      width: 120px;
+      object-fit: contain;
+    }
 
-.header img{
-    display: block;
-    height: 100px;
-    width: 100px;
-}
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      max-width: 520px;
+      text-align: right;
+    }
 
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:flex-end;
-    gap: 16px 32px;
-    max-width: 620px;
-}
+    header a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.2s ease-in-out;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
 
-nav a{ 
-    color: #000000;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-nav a:hover{
-    text-decoration: underline;
-}
-footer {
-    background-color: #5b3a29;            
-    margin-top: 60px;
-}
-
-footer nav a {
-    color: #fff;
-}
-  
     /* Main Content Styling */
     main {
       flex: 1;
@@ -208,11 +199,6 @@ footer nav a {
       border-radius: 15px;
     }
 
-    footer a:hover {
-      background-color: var(--gold);
-      color: #000;
-    }
-
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -240,7 +226,7 @@ footer nav a {
       <a href="gallery.html">Gallery</a>
       <a href="shop.html">Shop</a>
       <a href="reviews.html">Reviews</a>
-      <a href="cart.html" style="background-color: var(--gold);">Cart</a>
+      <a href="cart.html">Cart</a>
       <a href="team.html">Our Team</a>
       <a href="contact.html">Contact Details</a>
     </nav>
