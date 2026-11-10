@@ -3,14 +3,222 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart</title>
-  
+  <title>Cart - Pawsitive Pet Academy</title>
+  <style>
+    :root {
+      --gold: #ebd469;
+      --pink: #f5c8c2;
+      --rose: #f8eae1;
+      --blue: #8de4ff;
+      --purple: #a379c9;
+      --footer-bg: #503B29;
+      --text-dark: #000000;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('backGroundPic.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header Styling */
+    header {
+      padding: 15px 30px;
+      display: flex;
+      align-items: right;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background-color: rgba(254, 248, 243, 0.85);
+      backdrop-filter: blur(5px);
+    }
+
+    header img {
+      border-radius: 8px;
+      height: 120px;
+      width: 120px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      max-width: 520px;
+      text-align: right;
+    }
+
+    header a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.2s ease-in-out;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Content Styling */
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #2b2b2b;
+    }
+
+    section {
+      background-color: var(--blue);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: rgba(141, 228, 255, 0.4);
+      font-weight: 700;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #2b2b2b;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 0.6rem;
+      background-color: white;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: var(--gold);
+      color: var(--text-dark);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background-color: var(--purple);
+      color: white;
+    }
+
+    .checkout-btn {
+      background-color: var(--pink);
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+
+    .checkout-btn:hover {
+      background-color: var(--purple);
+      color: white;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: var(--footer-bg);
+      color: white;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: auto;
+    }
+
+    footer img {
+      height: 150px;
+      width: 150px;
+      object-fit: contain;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      padding: 5px 10px;
+      border-radius: 15px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        justify-content: center;
+        margin-top: 15px;
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <img src="Logo.jpeg" alt="Pawsitive Pet Academy Logo" width="150" height="100">
-     <a href="index.html">Home</a>
+    <img src="Paws-removebg-preview.png" alt="Pawsitive Pet Academy Logo">
+    <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="courses.html">Courses</a>
       <a href="pricing.html">Pricing</a>
@@ -21,7 +229,7 @@
       <a href="cart.html">Cart</a>
       <a href="team.html">Our Team</a>
       <a href="contact.html">Contact Details</a>
-   
+    </nav>
   </header>
 
   <main>
@@ -37,60 +245,50 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Basic Dog Walk</td>
-            <td>1</td>
-            <td>R750</td>
-            <td><button>Remove</button></td>
-          </tr>
-          <tr>
-            <td>Chew Toy</td>
-            <td>2</td>
-            <td>R240</td>
-            <td><button>Remove</button></td>
-          </tr>
+        <tbody id="cartTableBody">
+          <!-- Dynamically populated by JavaScript -->
         </tbody>
       </table>
     </section>
 
     <section>
       <h3>Your Order</h3>
-      <p>Number of Product: 3</p>
-      <p>Order Total: R990</p>
-      <h3>Total: R990</h3>
-      <button>Proceed to checkout</button>
+      <p>Number of Product: <span id="totalCount">0</span></p>
+      <p>Order Total: R<span id="orderSubtotal">0.00</span></p>
+      <h3>Total: R<span id="orderTotal">0.00</span></h3>
+      <button class="checkout-btn" onclick="proceedCheckout()">Proceed to checkout</button>
     </section>
 
     <section>
       <h3>Payment Details</h3>
-      <form>
+      <form onsubmit="processPayment(event)">
         <label>Full Name</label><br>
-        <input type="text" name="fullname"><br><br>
+        <input type="text" id="payName" required><br>
 
         <label>Email Address</label><br>
-        <input type="email" name="email"><br><br>
+        <input type="email" id="payEmail" required><br>
 
         <label>Card Number</label><br>
-        <input type="text" name="cardnumber" placeholder="1234 5678 9012 3456"><br><br>
+        <input type="text" id="payCard" placeholder="1234 5678 9012 3456" required><br>
 
         <label>Expiry Date</label><br>
-        <input type="text" name="expiry" placeholder="MM/YY"><br><br>
+        <input type="text" id="payExpiry" placeholder="MM/YY" required><br>
 
         <label>CVV</label><br>
-        <input type="text" name="cvv" placeholder="123"><br><br>
+        <input type="text" id="payCvv" placeholder="123" required><br>
 
         <label>Billing Address</label><br>
-        <input type="text" name="address"><br><br>
+        <input type="text" id="payAddress" required><br>
 
-        <button type="submit">Pay Now</button>
+        <button type="submit" style="background-color: var(--gold); width: 100%; padding: 12px; border-radius: 8px; font-size: 1rem;">Pay Now</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <img src="second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="150" height="100">
-     <a href="index.html">Home</a>
+    <img src="images\second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo">
+    <nav style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="courses.html">Courses</a>
       <a href="pricing.html">Pricing</a>
@@ -101,9 +299,78 @@
       <a href="cart.html">Cart</a>
       <a href="team.html">Our Team</a>
       <a href="contact.html">Contact Details</a>
-   
-    
+    </nav>
   </footer>
+
+  <script>
+    // JavaScript to load and render cart items dynamically
+    function loadCart() {
+      let cart = JSON.parse(localStorage.getItem('shopCart')) || [];
+      const tbody = document.getElementById('cartTableBody');
+      const totalCountElem = document.getElementById('totalCount');
+      const orderSubtotalElem = document.getElementById('orderSubtotal');
+      const orderTotalElem = document.getElementById('orderTotal');
+
+      tbody.innerHTML = '';
+      let totalProducts = 0;
+      let orderTotal = 0;
+
+      if (cart.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align: center;">Your cart is empty.</td></tr>`;
+      } else {
+        cart.forEach((item, index) => {
+          let itemTotal = item.price * item.quantity;
+          totalProducts += item.quantity;
+          orderTotal += itemTotal;
+
+          tbody.innerHTML += `
+            <tr>
+              <td>${item.name}</td>
+              <td>${item.quantity}</td>
+              <td>R${itemTotal.toFixed(2)}</td>
+              <td><button onclick="removeItem(${index})">Remove</button></td>
+            </tr>
+          `;
+        });
+      }
+
+      totalCountElem.textContent = totalProducts;
+      orderSubtotalElem.textContent = orderTotal.toFixed(2);
+      orderTotalElem.textContent = orderTotal.toFixed(2);
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem('shopCart')) || [];
+      cart.splice(index, 1);
+      localStorage.setItem('shopCart', JSON.stringify(cart));
+      loadCart();
+    }
+
+    function proceedCheckout() {
+      let cart = JSON.parse(localStorage.getItem('shopCart')) || [];
+      if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function processPayment(event) {
+      event.preventDefault();
+      let cart = JSON.parse(localStorage.getItem('shopCart')) || [];
+      if (cart.length === 0) {
+        alert('Your cart is empty. Please add items before paying.');
+        return;
+      }
+
+      alert('Payment successful! Thank you for your purchase with Pawsitive Pet Academy.');
+      localStorage.removeItem('shopCart');
+      loadCart();
+      event.target.reset();
+    }
+
+    window.onload = loadCart;
+  </script>
 
 </body>
 </html>

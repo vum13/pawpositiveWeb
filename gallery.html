@@ -26,7 +26,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--cream-light);
       /* Setting the background pattern provided */
-      background-image: url('backgroung pic.jpeg'); 
+      background-image: url('backGroundPic.jpeg'); 
       background-size: cover;
       background-attachment: fixed;
       color: var(--text-dark);
@@ -37,20 +37,21 @@
 
     /* Header Styling */
     header {
-      
       padding: 15px 30px;
       display: flex;
-      align-items: center;
+      align-items: right;
       justify-content: space-between;
-     
       flex-wrap: wrap;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background-color: rgba(254, 248, 243, 0.85);
+      backdrop-filter: blur(5px);
     }
 
     header img {
       border-radius: 8px;
-      height: 150px;
-      width: 150px;
+      height: 120px;
+      width: 120px;
+      object-fit: contain;
     }
 
     nav {
@@ -58,23 +59,23 @@
       gap: 15px;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: flex-end;
+      max-width: 520px;
+      text-align: right;
     }
 
-    nav a {
+    header a {
       text-decoration: none;
       color: var(--text-dark);
-      font-weight: 600;
+      font-weight: 500;
       font-size: 0.95rem;
       padding: 6px 12px;
       border-radius: 20px;
       transition: all 0.2s ease-in-out;
     }
-
-    nav a:hover {
-        background-color: var(--gold);
-        color: #000;
+    header a:hover {
+      text-decoration: underline;
     }
-
     /* Main Section Styling */
     main {
       flex: 1;
@@ -184,9 +185,10 @@
       margin-top: auto;
     }
 
+
     footer img {
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      width: 150px;
     }
 
     footer a {
@@ -196,11 +198,7 @@
       transition: color 0.2s;
     }
 
-    footer a:hover {
-       background-color: var(--gold);
-        color: #000;
-    }
-
+   
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .gallery-row {
@@ -229,7 +227,7 @@
       <a href="pricing.html">Pricing</a>
       <a href="blog.html">Blog</a>
       <a href="shop.html">Shop</a>
-      <a href="gallery.html" style="background-color: var(--gold);">Gallery</a>
+      <a href="gallery.html">Gallery</a>
       <a href="reviews.html">Reviews</a>
       <a href="cart.html">Cart</a>
       <a href="team.html">Our Team</a>

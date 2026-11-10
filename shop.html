@@ -2,110 +2,326 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shop</title>
+    <title>Shop - Pawsitive Pet Academy</title>
+    <style>
+        :root {
+            --gold: #ebd469;
+            --pink: #f5c8c2;
+            --rose: #f8eae1;
+            --cream-light: #fef8f3;
+            --cream: #fff6e9;
+            --blue: #8de4ff;
+            --purple: #a379c9;
+            --footer-bg: #503B29;
+            --text-dark: #000000;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('backGroundPic.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: var(--cream-light);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+      padding: 15px 30px;
+      display: flex;
+      align-items: right;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background-color: rgba(254, 248, 243, 0.85);
+      backdrop-filter: blur(5px);
+    }
+
+    header img {
+      border-radius: 8px;
+      height: 120px;
+      width: 120px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      max-width: 520px;
+      text-align: right;
+    }
+
+    header a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.2s ease-in-out;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+
+        /* Main Section Styling */
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2rem;
+            color: #2b2b2b;
+        }
+
+        .banner {
+            max-width: 900px;
+            margin: 20px auto;
+            position: relative;
+            text-align: right;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .banner img {
+            width: 800px;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .banner h2 {
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.8rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        /* Products Table Grid Styling */
+        table.products-table {
+            margin: 20px auto 50px auto;
+            border-collapse: separate;
+            border-spacing: 30px;
+            max-width: 1000px;
+        }
+
+        table.products-table td {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+            width: 250px;
+        }
+
+        table.products-table td:hover {
+            transform: translateY(-5px);
+        }
+
+        table.products-table img {
+            width: 180px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: var(--gold);
+            color: var(--text-dark);
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--purple);
+            color: white;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--footer-bg);
+            color: white;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        footer img {
+            height: 150px;
+            width: 150px;
+            object-fit: contain;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        footer a:hover {
+            background-color: var(--gold);
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            table.products-table, table.products-table tbody, table.products-table tr, table.products-table td {
+                display: block;
+                width: 100%;
+            }
+            .banner h2 {
+                font-size: 1.2rem;
+                right: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-     <header>
-        <img src="Logo.jpeg" alt="Pet Pawsitive Academy Logo" width="70">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="courses.html">Courses</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="blog.html">Blog</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html">Shop</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="cart.html">Cart</a>
-      <a href="team.html">Our Team</a>
-      <a href="contact.html">Contact Details</a>
-        
-   
+    <header>
+        <img src="Paws-removebg-preview.png" alt="Pet Pawsitive Academy Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="shop.html">Shop</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="cart.html">Cart</a>
+            <a href="team.html">Our Team</a>
+            <a href="contact.html">Contact Details</a>
+        </nav>
     </header>
 
     <h1>Pawsitive Shop</h1>
 
     <!-- Banner Section -->
-    <div>
-        <img src="images\cart pic.jpg" alt="Dog biting ball - Treat your pet like royalty!" width="100%">
+    <div class="banner">
+        <img src="images\cart pic.jpg" alt="Dog biting ball - Treat your pet like royalty!">
         <h2>Treat your pet like royalty!</h2>
     </div>
 
-    <br>
-
-    <!-- Products Grid (Structured using HTML Table) -->
-    <table border="0" cellpadding="10">
+    <!-- Products Grid Structured using HTML Table -->
+    <table class="products-table">
         <!-- Row 1 -->
         <tr>
             <!-- Product 1 -->
-            <td align="center">
-                <img src="images\cart pic2.jpg" alt="Fish Toy" width="150"><br>
-                <form action="cart.html" method="post">
+            <td>
+                <img src="images\cart pic2.jpg" alt="Fish Toy">
+                <form onsubmit="addToCart(event, 'Fish Toy', 120)">
                     <button type="submit">Add to cart</button>
                 </form>
             </td>
 
             <!-- Product 2 -->
-            <td align="center">
-                <img src="images\cart pic3.jpg" alt="Colorful Paw Balls" width="150"><br>
-                <form action="cart.html" method="post">
+            <td>
+                <img src="images\cart pic3.jpg" alt="Colorful Paw Balls">
+                <form onsubmit="addToCart(event, 'Colorful Paw Balls', 90)">
                     <button type="submit">Add to cart</button>
                 </form>
             </td>
 
             <!-- Product 3 -->
-            <td align="center">
-                <img src="images\cart pic 4.webp" alt="Turtle Toy" width="150"><br>
-                <form action="cart.html" method="post">
+            <td>
+                <img src="images\cart pic 4.webp" alt="Turtle Toy">
+                <form onsubmit="addToCart(event, 'Turtle Toy', 150)">
                     <button type="submit">Add to cart</button>
                 </form>
             </td>
         </tr>
 
+        <!-- Row 2 -->
         <tr>
             <!-- Product 4 -->
-            <td align="center">
-                <img src="images\cart pic 5.jpg" alt="Dumbbell Rope Toy" width="150"><br>
-                <form action="cart.html" method="post">
+            <td>
+                <img src="images\cart pic 5.jpg" alt="Dumbbell Rope Toy">
+                <form onsubmit="addToCart(event, 'Dumbbell Rope Toy', 110)">
                     <button type="submit">Add to cart</button>
                 </form>
             </td>
 
             <!-- Product 5 -->
-            <td align="center">
-                <img src="images\cart pic 6.jpg" alt="Woven Scratch Balls" width="150"><br>
-                <form action="cart.html" method="post">
+            <td>
+                <img src="images\cart pic 6.jpg" alt="Woven Scratch Balls">
+                <form onsubmit="addToCart(event, 'Woven Scratch Balls', 130)">
                     <button type="submit">Add to cart</button>
                 </form>
             </td>
 
             <!-- Product 6 -->
-            <td align="center">
-                <img src="images\cart pic 7.jpg" alt="Pink Rubber Bone" width="150"><br>
-                <form action="cart.html" method="post">
+            <td>
+                <img src="images\cart pic 7.jpg" alt="Pink Rubber Bone">
+                <form onsubmit="addToCart(event, 'Pink Rubber Bone', 95)">
                     <button type="submit">Add to cart</button>
                 </form>
             </td>
         </tr>
     </table>
 
-        <footer>
-           <img src="images\second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo" width="150" height="100">
-    <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="courses.html">Courses</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="blog.html">Blog</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="shop.html">Shop</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="cart.html">Cart</a>
-      <a href="team.html">Our Team</a>
-      <a href="contact.html">Contact Details</a>
-        
-   
+    <footer>
+        <img src="images\second_paw_logo-removebg-preview.png" alt="Pawsitive Pet Academy Logo">
+        <nav style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="shop.html">Shop</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="cart.html">Cart</a>
+            <a href="team.html">Our Team</a>
+            <a href="contact.html">Contact Details</a>
+        </nav>
     </footer>
 
-
+    <script>
+        // JavaScript to handle adding items to localStorage cart
+        function addToCart(event, productName, price) {
+            event.preventDefault();
+            let cart = JSON.parse(localStorage.getItem('shopCart')) || [];
+            
+            let existingItem = cart.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name: productName, price: price, quantity: 1 });
+            }
+            
+            localStorage.setItem('shopCart', JSON.stringify(cart));
+            alert(`${productName} has been added to your cart!`);
+        }
+    </script>
 </body>
 </html>
